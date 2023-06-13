@@ -11,21 +11,19 @@ The model with optimized hyperparameters performed best.
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-I attempted to add weekday as a separate feature because I recokned that demand could vary as a function of the week (e.g. lower
+I added weekday as a separate feature because I recokned that demand could vary as a function of the week (e.g. lower
 on business days and higher on weekends). But exploraroty analysis showed that this wasn't true--demand was uniform across weekdays.
-The resulting model actually performed worse than the initial 'raw' model.
+The resulting model performed marginally better the initial 'raw' model.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-Performance worsened after I added the weekday as a separate feature. Since demand was constant across weekdays, it's possible that this
-'dead' variable introduced more inexactitude across the models, thus impacting convergence and worsening the model characteristics.
+Performance improved (Kaggle score <1% lower) after weekday was added as a separate feature. This may have happened because biclcyel usage varied little as a function of the weekday. Therefore including weekdays afforded only a negligible imrpovement.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-Hyperparameter tuning yielded the best results, with a roughly twofold improvement in my Kaggle score.
+Hyperparameter tuning yielded the best results, with a roughly 40% improvement in the model's Kaggle score.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-Trying out other values and combinations of hyperparameters. Tweaking hyperparameters yielded the best results. Another
-potential approach is adding new features, particularly splitting datetime into day, month and year.
+Since tweaking hyperparameters yielded the best results, trying out other values and combinations of hyperparameters seems to be the most promising approach. Another possibility is adding new features, particularly splitting datetime into day, month and year.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the Kaggle score.
 |model|Time limit|Presets|Custom hpo|score|
@@ -33,8 +31,6 @@ potential approach is adding new features, particularly splitting datetime into 
 |initial|600|Best quality|No|1.80506|
 |add_features|600|Best quality|No|2.14682|
 |hpo|600|Best quality|Yes|1.50047|
-
-
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
