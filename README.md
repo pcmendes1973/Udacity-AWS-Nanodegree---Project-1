@@ -3,7 +3,7 @@
 
 Files for project 1 of the Udacity AWS Machine Learning Nanodegree.
 
-Contents include:
+## Contents ##
 * This file
 * 1 Notebook
 * 1 Notebook export in HTML format
