@@ -22,15 +22,18 @@ Performance improved (Kaggle score <1% lower) after weekday was added as a separ
 ### How much better did your model preform after trying different hyper parameters?
 Hyperparameter tuning yielded the best results, with a roughly 40% improvement in the model's Kaggle score.
 
+A further attempt to introduce new hyperparameters to improve the performance of neural networks and greadient boosting methods, which were doing less well than weighted ensemble models, failed to improve either the Kaggle score or the overall Autogluon score.
+
 ### If you were given more time with this dataset, where do you think you would spend more time?
-Since tweaking hyperparameters yielded the best results, trying out other values and combinations of hyperparameters seems to be the most promising approach. Another possibility is adding new features, particularly splitting datetime into day, month and year.
+Since tweaking hyperparameters yielded the best results, trying out other values and combinations of hyperparameters seems to be the most promising approach. Another possibility is adding new features, particularly splitting datetime into day, month and year. Some models fared less well, so it might be profitable to discard them and focus efforts on the models that have yielded the best results so far.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the Kaggle score.
 |model|Time limit|Presets|Custom hpo|score|
 |--|--|--|--|--|
-|initial|600|Best quality|No|1.80506|
-|add_features|600|Best quality|No|2.14682|
-|hpo|600|Best quality|Yes|1.50047|
+|Initial|600|Best quality|No|1.807|
+|Add weekday|600|Best quality|No|1.789|
+|HPO tuning|600|Best quality|Yes|1.321|
+|HPO tuning 2|600|Best quality|Yes|1.321|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
